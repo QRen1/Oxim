@@ -1,0 +1,69 @@
+.link-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container {
+  overflow: hidden;
+  position: relative;
+  height: 35px;
+}
+.rotate {
+  position: relative;
+  transition: 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textone,
+.texttwo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 120%;
+  position: relative;
+  width: 100%;
+}
+
+.texttwo {
+  position: absolute;
+  transform: translateY(100%);
+}
+
+.rotate:hover {
+  transform: translateY(-100%);
+}
+
+.invi {
+  z-index: 2;
+  transform: translateY(-110%);
+  transition: 0.4s ease;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: fixed;
+  justify-content: center;
+  background-color: white;
+  padding-top: 120px;
+}
+
+.visible {
+  transform: translateY(7%);
+  z-index: 2;
+  transition: 0.4s ease;
+  position: fixed;
+  width: 100%;
+  height: 94vh;
+  align-items: center;
+  display: fixed;
+  justify-content: center;
+  background-color: white;
+}
+
+.icon {
+  z-index: 10;
+  transition: 0.3s all;
+}

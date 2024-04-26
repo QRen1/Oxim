@@ -1,0 +1,46 @@
+.categories {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-size: 3rem;
+}
+
+.sample {
+  margin: 70px 70px 20px 70px;
+  font-weight: bold;
+  font-size: clamp(15px, 6vw, 100px);
+  transition: 0.7s ease all;
+}
+
+.sticky-box {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+  /* Adjust the value as needed */
+  z-index: 1000;
+  /* Adjust the z-index as needed */
+}
+
+@media screen and (max-width: 645px) {
+  .categories {
+    font-size: 2rem;
+  }
+
+  .category-arrow {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .categories {
+    font-size: 1.5rem;
+  }
+
+  .category-arrow {
+    font-size: 1.2rem;
+  }
+}
