@@ -4,6 +4,8 @@ import HomePage from "./pages/HomePage";
 import AuthCallBackPage from "./pages/AuthCallBackPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
+import ManageRestaurantPage from "./pages/ManageRestaurantPage";
+import ShopMenu from "./pages/ShopMenu";
 
 const AppRoutes = () => {
   return (
@@ -13,6 +15,15 @@ const AppRoutes = () => {
         element={
           <Layout>
             <HomePage />
+            <ShopMenu />
+          </Layout>
+        }
+      />
+      <Route
+        path="/shop"
+        element={
+          <Layout>
+            <ShopMenu />
           </Layout>
         }
       />
@@ -24,6 +35,14 @@ const AppRoutes = () => {
           element={
             <Layout>
               <UserProfilePage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/manage-restaurant"
+          element={
+            <Layout>
+              <ManageRestaurantPage />
             </Layout>
           }
         />

@@ -1,0 +1,15 @@
+export const cuisineList = [
+  "Inari",
+  "Maki",
+  "Tamagoyaki",
+  "Onigiri",
+  "Crab",
+  "Salmon",
+  "Tuna",
+  "Chili Beef",
+  "Nigiri",
+  "Spam Musubi",
+  "Salad",
+  "Kani Salad",
+  "Spring Roll",
+];

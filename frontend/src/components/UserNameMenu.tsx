@@ -24,6 +24,14 @@ const UserNameMenu = () => {
         style={{ transform: "translateX(-30%)", border: "black 1px solid" }}
       >
         <DropdownMenuItem className="flex flex-col">
+          <Link
+            to="/manage-restaurant"
+            className="font-bold text-center m-[auto]"
+          >
+            Manage Store
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem className="flex flex-col">
           <Link to="/user-profile" className="font-bold text-center m-[auto]">
             User Profile
           </Link>

@@ -4,8 +4,6 @@ import { useState, useEffect } from "react";
 
 import "../styles/home.css";
 import { ArrowRight, ArrowLeft } from "lucide-react";
-import flower from "../assets/flower.jfif";
-import freshFlower from "../assets/freshFlower.jfif";
 import driedFlower from "../assets/driedFlower.jfif";
 import livePlant from "../assets/livePlant.jfif";
 import aromaCandles from "../assets/aromaCandles.jfif";
