@@ -1,78 +1,86 @@
 * {
-  padding: 0px;
-  margin: 0px;
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-.grid-container {
+.addItem {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  align-items: center;
+  width: 100vw;
 }
-
-.grid-item {
-  border: 1px solid black;
-  border-left: 0px;
-  border-top: 0px;
-  background-repeat: no-repeat;
+.menuItem {
+  height: 80vh;
+  border: solid 1px black;
+  margin-top: 5px;
+}
+.addMenu {
+  border: solid 1px black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.menuImage {
+  height: 85%;
   background-size: cover;
-  background-position: center;
-}
-
-.shop-container {
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
-  overflow: hidden;
+  border-bottom: 1px solid black;
 }
-
-.product-info {
-  background-color: #e6e7e8;
+.menuInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin: 10px 15px 0px 15px;
+  margin-bottom: 15px;
+  height: 5%;
 }
-
-.button:hover {
+.addToCartButton {
+  width: 50%;
+  background-color: black;
+  color: WHITE;
+  border: black 1px solid;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.addToCartButton:hover,
+.buyButton:hover {
+  background-color: white;
+  color: black;
+}
+.buyButton {
+  width: 50%;
   background-color: black;
   color: white;
-  transition: 0.1s ease-in-out;
+  border: black 1px solid;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
-
-.remove-button {
-  background-color: #dc3545;
+.buttonContainer {
+  height: 7%;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+}
+.addButton {
+  height: 50px;
+  background-color: black;
   color: white;
   border: #dc3545;
-}
-.remove-button:hover {
-  background-color: black;
-  color: white;
-  transition: 0.1s ease-in-out;
-}
-
-.categoryText {
-  font-size: 3vw;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 1220px) {
-  .grid-container {
+  .addItem {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 800px) {
-  .grid-container {
+  .addItem {
     grid-template-columns: repeat(1, 1fr);
-  }
-  .header {
-    max-width: 40vw;
-  }
-  .category-container {
-    height: 100px;
-    margin-top: 3vh;
-  }
-}
-@media screen and (max-width: 768px) {
-  .all-container {
-    padding-top: 10vh;
-  }
-  .category-container {
-    margin-top: 0vh;
   }
 }

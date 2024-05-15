@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
+const { Schema } = mongoose;
 
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
   auth0Id: {
     type: String,
     required: true,
@@ -21,6 +22,13 @@ const userSchema = new mongoose.Schema({
   country: {
     type: String,
   },
+  // Add reference to cart items
+  cartItems: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "CartItem", // Reference to the CartItem model
+    },
+  ],
 });
 
 const User = mongoose.model("User", userSchema);

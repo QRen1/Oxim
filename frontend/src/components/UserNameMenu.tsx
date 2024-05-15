@@ -13,7 +13,7 @@ const UserNameMenu = () => {
   const { user, logout } = useAuth0();
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="flex items-center px-3 font-bold gap-2">
+      <DropdownMenuTrigger className="flex items-center justify-center font-bold gap-2">
         <img
           src={user?.picture}
           alt="User Profile"

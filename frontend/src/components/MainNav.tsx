@@ -8,16 +8,12 @@ const MainNav = () => {
 
   const navLinks = [
     {
-      text: "Home",
-      link: "/home",
-    },
-    {
       text: "Shop",
-      link: "/shop",
+      link: "/",
     },
     {
-      text: "About",
-      link: "/about",
+      text: "Orders",
+      link: "/order",
     },
     {
       text: "Plate",

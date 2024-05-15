@@ -1,12 +1,13 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import Layout from "./layouts/layout";
-import HomePage from "./pages/HomePage";
+// import HomePage from "./pages/HomePage";
 import AuthCallBackPage from "./pages/AuthCallBackPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import ManageRestaurantPage from "./pages/ManageRestaurantPage";
 import ShopMenu from "./pages/ShopMenu";
-
+import CartPage from "./pages/cartPage";
+import PurchasePage from "./pages/ordersPage";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -14,19 +15,11 @@ const AppRoutes = () => {
         path="/"
         element={
           <Layout>
-            <HomePage />
             <ShopMenu />
           </Layout>
         }
       />
-      <Route
-        path="/shop"
-        element={
-          <Layout>
-            <ShopMenu />
-          </Layout>
-        }
-      />
+
       <Route path="/auth-callback" element={<AuthCallBackPage />} />
 
       <Route element={<ProtectedRoute />}>
@@ -43,6 +36,30 @@ const AppRoutes = () => {
           element={
             <Layout>
               <ManageRestaurantPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/cart"
+          element={
+            <Layout>
+              <CartPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/order"
+          element={
+            <Layout>
+              <PurchasePage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/shop"
+          element={
+            <Layout>
+              <ShopMenu />
             </Layout>
           }
         />

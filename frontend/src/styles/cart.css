@@ -1,0 +1,53 @@
+.cartContainer {
+  width: 100vw;
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+.cartImage {
+  height: 200px;
+  width: 200px;
+  border-right: 1px black solid;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-bottom: 1px solid black;
+}
+.cartItem {
+  gap: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.cartButton {
+  width: 100%;
+  border: solid 1px black;
+  height: 50px;
+}
+.cartSmallContainer {
+  border: black 1px solid;
+  display: flex;
+}
+
+.cartButtonContainer {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+
+.cart,
+.buy {
+  background-color: black;
+  color: white;
+}
+
+.cart:hover,
+.buy:hover {
+  background-color: white;
+  color: black;
+}
+
