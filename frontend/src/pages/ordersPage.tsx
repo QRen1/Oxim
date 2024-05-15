@@ -53,22 +53,7 @@ function PurchasePage() {
   if (error) {
     return <div>Error: {error}</div>;
   }
-  function getStatusBackgroundColor(status: string): string {
-    switch (status) {
-      case "pending":
-        return "gray";
-      case "preparing":
-        return "#7F7F00"; // yellow
-      case "to be picked up":
-        return "#000066y";
-      case "completed":
-        return "#14701E"; // green
-      case "canceled":
-        return "red";
-      default:
-        return "white";
-    }
-  }
+
   return (
     <div className="purchaseContainer">
       <div className="purchaseItem">
