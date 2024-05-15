@@ -20,7 +20,7 @@ interface UserInfo {
 
 function CartPage() {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [totalAmount, setTotalAmount] = useState<number>(0);
+  // const [totalAmount, setTotalAmount] = useState<number>(0);
   const { user, getAccessTokenSilently } = useAuth0();
   const userId = user?.sub;
 
@@ -33,7 +33,7 @@ function CartPage() {
         .get(`http://localhost:7000/cart/getCart?userId=${userId}`)
         .then((response) => {
           setCartItems(response.data);
-          calculateTotalAmount(response.data);
+          // calculateTotalAmount(response.data);
         })
         .catch((error) => {
           console.error("Error fetching cart items:", error);
@@ -61,13 +61,13 @@ function CartPage() {
     }
   }, [userId, getAccessTokenSilently]);
 
-  const calculateTotalAmount = (items: CartItem[]) => {
-    let total = 0;
-    items.forEach((item) => {
-      total += item.price * item.quantity;
-    });
-    setTotalAmount(total);
-  };
+  // const calculateTotalAmount = (items: CartItem[]) => {
+  //   let total = 0;
+  //   items.forEach((item) => {
+  //     total += item.price * item.quantity;
+  //   });
+  //   setTotalAmount(total);
+  // };
 
   // const handleRemoveFromCart = (cartItemId: string) => {
   //   axios
@@ -95,9 +95,9 @@ function CartPage() {
         setCartItems((prevCartItems) =>
           prevCartItems.filter((item) => item._id !== cartItemId)
         );
-        calculateTotalAmount(
-          cartItems.filter((item) => item._id !== cartItemId)
-        );
+        // calculateTotalAmount(
+        //   cartItems.filter((item) => item._id !== cartItemId)
+        // );
       })
       .catch((error) => {
         // Error removing item from cart
@@ -117,7 +117,7 @@ function CartPage() {
         quantity: newQuantity,
       };
       setCartItems(updatedCartItems);
-      calculateTotalAmount(updatedCartItems);
+      // calculateTotalAmount(updatedCartItems);
     }
   };
 
@@ -149,7 +149,7 @@ function CartPage() {
 
         axios
           .post(
-            `http://localhost:7000/purchases/addPurchaseFromCart`,
+            `http://localhost:7000/purchase/addPurchaseFromCart`,
             purchaseData
           )
           .then((response) => {
