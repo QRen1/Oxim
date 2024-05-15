@@ -67,3 +67,24 @@ li {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+@media screen and (max-width: 1400px) {
+  .purchaseItem {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .purchaseImageContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .purchaseImageContainer > img {
+    width: 70%;
+    margin: auto;
+    border: solid 1px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .purchaseImageContainer > img {
+    width: 100%;
+  }
+}

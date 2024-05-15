@@ -12,11 +12,11 @@ const MainNav = () => {
       link: "/",
     },
     {
-      text: "Orders",
+      text: "My Orders",
       link: "/order",
     },
     {
-      text: "Plate",
+      text: "My Plate",
       link: "/cart",
     },
   ];
