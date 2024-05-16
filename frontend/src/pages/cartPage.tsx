@@ -149,7 +149,7 @@ function CartPage() {
 
         axios
           .post(
-            `http://localhost:7000/purchase/addPurchaseFromCart`,
+            `http://localhost:7000/purchases/addPurchaseFromCart`,
             purchaseData
           )
           .then((response) => {
